@@ -1,0 +1,18 @@
+// React prerequisites 
+- HTML
+- CSS
+- Tailwind css
+- JS=>
+	- ES6
+	- DOM
+	- How js engine works
+	- Modules
+	- Destructuring-rest& spread
+	- Classes
+	- Events,Timers
+	- Objects, Arrays, String
+	- map filter reduce
+
+// React=> 
+- JavaScript library which is used to create single page application.
+- 	
