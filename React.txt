@@ -5,14 +5,90 @@
 - JS=>
 	- ES6
 	- DOM
-	- How js engine works
+	- How JS engine works
 	- Modules
-	- Destructuring-rest& spread
+	- Destructuring- rest& spread
 	- Classes
-	- Events,Timers
+	- Events, Timers
 	- Objects, Arrays, String
 	- map filter reduce
 
 // React=> 
 - JavaScript library which is used to create single page application.
-- 	
+- JSAP CSS animation library	
+
+// Library vs Framework
+   	- Library => - Collection of reusable Block of code
+		     - Light Weight
+		     - Loosely typed.	
+		     - Always particular functionality oriented
+		     - Using Libraries we can create fast and scalable applications
+		     - Easy to debug 
+		     - Can install external libraries.
+		   	
+	- Framework=> - Collection of multiple libraries.
+		      - Heavy Weight.
+		      - Strictly typed compared with libraries
+		      - Always multiple functionality oriented.
+		      - Using Libraries we can crate applications but that maybe slower compared to libraries 
+		      - Debugging is difficult task.	
+		      - Can install external libraries.	
+
+
+// Single page applications
+- Application which doesn't required page reload to update content=> Single html file
+- Faster than multipage application
+- Ajax is hero of Single page application
+
+
+// Ajax=> (Async JS and XML)=> 
+- Ajax will send necessary requests to server so that bandwidth will be less hence request response cycle faster hence application will be faster 
+-  
+
+
+//Package bundler=>
+- Will bundle all the request into induvial bundles based on extensions 
+- Package bundlers will help to reduce bandwidth
+- If we are sending n no of request from frontend that multiple request are bundled into as minimum no request as possible based on extensions by package bundler
+- Ex. Webpack, Rollup, Parcer 
+
+
+// Installation
+- Folder create 
+- In that folder open cmd
+- cmd command=> npm create vite
+- Enter project name , package name(Default project name)
+- Select framework
+- Select language 
+- Gives 3 command run one by one
+- Default port => 5173
+
+//Folder structure
+- Node module=> All packages downloaded during react installation, needed for execution of react application ex. babel,eslint ,rollup, vite.js, react, react dom,   
+- public=> Used to hold static assets in react similar to assets in src folder. Dont use mostly keep mostly in assets folder.
+- src=> - Assets=> Static content stored in this folder mostly
+		- 
+- eslint.conflict.js=> It is the package which confirms syntax validation in building react application(analogous to java compiler)
+- index.html=> Single html file. we do not add anything inside that.Inside that there is only single div with id root.
+- package.json=>- It is like dashboard of entire react application where you get important limited info related to packages like version.
+				- devDependencies=> dependencies required only for development and not required after deployment.Majour dependencies like eslint,react,vite etc.
+- packageLog.json=> Similar to like package.json but detailed logs present related to react file
+- vite.config.js=> Information about vite configuration.
+
+//Code flow=>
+Diffing algo=> Process to find different bet real dom and virtual dom
+Reconciliation process=> Process of implementing the changes from virtual dom to real dom that are found during the diffing algo
+
+
+- React fiber=> All changes in handle by react fiber it is analogous to js engine.
+- What is Babel=> Babel is transpiler. It will convert the modern js(.JSX) code to browser understandable code(.js),this process is called transpilation.
+- JSX=> Javascript xml => JSX is html look like js code.
+- Transpilation occurs during the rendering
+
+Src=> 
+- Each individuals reusable component is created inside your src folder as separate component
+- main.jsx is only capable to communicate with your browser
+- For main.jsx their is css file index.css
+- 
+
+
