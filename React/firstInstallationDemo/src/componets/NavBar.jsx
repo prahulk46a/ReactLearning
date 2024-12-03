@@ -1,6 +1,3 @@
-
-
-
 let NavBar=()=> {
 
   return (

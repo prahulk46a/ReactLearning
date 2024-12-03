@@ -3,7 +3,6 @@ import HomeMain from "./HomeMain.jsx";
 
 
 let Home=()=> {
-
     return (
       <div id="home">
           <HomeAside/>

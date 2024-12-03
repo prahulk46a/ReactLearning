@@ -13,6 +13,14 @@
 	- Objects, Arrays, String
 	- map filter reduce
 
+// History of React=> 
+- Created by Facebook(Jordan Walke) in 2011
+- Library
+- Follows component based based. 
+- Supports=> JavaScript,Typescript
+- 2011-messenger implementation,2012 -Instagram, 2013- Open source
+
+
 // React=> 
 - JavaScript library which is used to create single page application.
 - JSAP CSS animation library	
@@ -46,7 +54,7 @@
 -  
 
 
-//Package bundler=>
+// Package bundler=>
 - Will bundle all the request into induvial bundles based on extensions 
 - Package bundlers will help to reduce bandwidth
 - If we are sending n no of request from frontend that multiple request are bundled into as minimum no request as possible based on extensions by package bundler
@@ -63,7 +71,7 @@
 - Gives 3 command run one by one
 - Default port => 5173
 
-//Folder structure
+// Folder structure
 - Node module=> All packages downloaded during react installation, needed for execution of react application ex. babel,eslint ,rollup, vite.js, react, react dom,   
 - public=> Used to hold static assets in react similar to assets in src folder. Dont use mostly keep mostly in assets folder.
 - src=> - Assets=> Static content stored in this folder mostly
@@ -75,20 +83,64 @@
 - packageLog.json=> Similar to like package.json but detailed logs present related to react file
 - vite.config.js=> Information about vite configuration.
 
-//Code flow=>
+// Code flow=>
 Diffing algo=> Process to find different bet real dom and virtual dom
 Reconciliation process=> Process of implementing the changes from virtual dom to real dom that are found during the diffing algo
 
+// Vite- Organization which handles installation and organization of react project
 
 - React fiber=> All changes in handle by react fiber it is analogous to js engine.
 - What is Babel=> Babel is transpiler. It will convert the modern js(.JSX) code to browser understandable code(.js),this process is called transpilation.
 - JSX=> Javascript xml => JSX is html look like js code.
 - Transpilation occurs during the rendering
 
-Src=> 
+// Src=> 
 - Each individuals reusable component is created inside your src folder as separate component
 - main.jsx is only capable to communicate with your browser
 - For main.jsx their is css file index.css
-- 
+- Every components name should only Capital first
+
+// Flow of React =>
 
 
+// npm=> Node Package manager
+- It is package manager which handles packages related to js framework and libraries
+- Over 21 lakhs Packages
+- In-order to download multiple packages => ex. npm install react babel react-dom.
+- Node js will find package and downloads using npm cmds
+
+// Main.jsx=>
+- Strict mode=> Checks js code double 
+- Will contact mostly only with app.jsx
+
+// createRoot(document.getElementById('root')).render(</App>)=> Analogous to div.append(app)
+	- createRoot=>  - React creates a FiberRootNode that is linked to the DOM container (e.g., document.getElementById('root'))
+					- This Fiber root serves as the entry point for all rendering work and keeps track of the state of the entire application.
+					- <div id="root">//app</div> is entry point and all elements are then appended into this div
+	
+	- render(</App>)=> 	- Validate Input: React ensures the element (e.g., <App />) is a valid React element
+					- The work is scheduled in a way that allows React to break it into chunks and prioritize tasks based on urgency
+					- During ths render process diffing algo and transpilation happens
+					- returned app </App> will be appended to div. 
+
+- Styles applied to index.css  => will be applied to all as all component are in the end going to come at root div i.e
+
+
+																 grandChild1
+														child1<= grandChild2...
+				returns main jsx				child jsx returned to ap
+		Div-Root<= Main <= App+child1+child2...child n<= child2
+
+														child n
+
+
+- It is recommended to write into component but outside of that return statement
+- jsx expressions=> Used to add js into html=> 
+ex. let Footer=()=> {
+		let a="Rahul";
+    return (
+      <div id="footer">
+          My name is {a}
+      </div>
+    )
+  } 
