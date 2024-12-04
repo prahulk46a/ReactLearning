@@ -144,3 +144,14 @@ ex. let Footer=()=> {
       </div>
     )
   } 
+  
+
+
+  // JSX=> 
+  - JavaScript and xml
+  - Html look like structure but not html
+  - While writing jsx we have to follow some rules=>
+		- Rule1: Compulsory you have to return jsx cause in the end all is going to add into main html
+		- Rule2: If you want to return single element send directly but if you want to return multiple elements then  you should wrap all into one parent element and send that one only.
+		- Rule3: Each and every tag must be closed.
+		- Rule4: 
