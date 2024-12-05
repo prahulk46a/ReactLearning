@@ -51,7 +51,7 @@
 
 // Ajax=> (Async JS and XML)=> 
 - Ajax will send necessary requests to server so that bandwidth will be less hence request response cycle faster hence application will be faster 
--  
+- Ajax will load the content without reloading the page
 
 
 // Package bundler=>
