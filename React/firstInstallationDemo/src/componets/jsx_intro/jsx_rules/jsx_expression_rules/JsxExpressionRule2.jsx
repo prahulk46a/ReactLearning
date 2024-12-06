@@ -1,8 +1,8 @@
 let JsxExpressionRule2=()=> {
-    let mode='Light';
+    let mode='Night';
     return (
       <div>
-            {mode=='Light'?<P>☀️</P>:<P>🌙</P>}
+            {mode === 'Light' ? <p>☀️</p> : <p>🌙</p>}
       </div>
     )
 }
