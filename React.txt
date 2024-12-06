@@ -155,6 +155,9 @@ ex. let Footer=()=> {
 		- Rule2: If you want to return single element send directly but if you want to return multiple elements then  you should wrap all into one parent element and send that one only.
 		- Rule3: Each and every tag must be closed.
 		- Rule4: We cannot use attributes like "class" "for", while writing the jsx instead of that we have to use "classname" and "htmlfor"
-		- Rule5: React Fragments are empty angular braces.Avoiding creating extra nodes, it will improve performance.
+		- Rule5: React Fragments are empty angular braces.Avoiding creating extra nodes, it will improve performance.We cannot use key in empty angular braces butt we can use in <React.fragment> or <Fragment>
 		- Rule6: JSX Expressions=> We can directly use strings no need of $ using {example}.
-					Rule1 for JSX Expressions=> We Cannot 
+					Rule1 for JSX Expressions=>
+						- We Cannot write conditional statements in jsx expressions except ternary operator.
+						- 
+
