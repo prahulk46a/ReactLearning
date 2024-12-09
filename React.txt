@@ -80,7 +80,7 @@
 - index.html=> Single html file. we do not add anything inside that.Inside that there is only single div with id root.
 - package.json=>- It is like dashboard of entire react application where you get important limited info related to packages like version.
 				- devDependencies=> dependencies required only for development and not required after deployment.Majour dependencies like eslint,react,vite etc.
-- packageLog.json=> Similar to like package.json but detailed logs present related to react file
+- package-Lock.json=> Similar to like package.json but detailed logs present related to react file
 - vite.config.js=> Information about vite configuration.
 
 // Code flow=>
@@ -155,9 +155,44 @@ ex. let Footer=()=> {
 		- Rule2: If you want to return single element send directly but if you want to return multiple elements then  you should wrap all into one parent element and send that one only.
 		- Rule3: Each and every tag must be closed.
 		- Rule4: We cannot use attributes like "class" "for", while writing the jsx instead of that we have to use "classname" and "htmlfor"
-		- Rule5: React Fragments are empty angular braces.Avoiding creating extra nodes, it will improve performance.We cannot use key in empty angular braces butt we can use in <React.fragment> or <Fragment>
+		- Rule5: React Fragments are empty angular braces.Avoiding creating extra nodes, it will improve performance.We cannot use key in empty angular braces butt we can use in <React.fragment> or <Fragment>. 
+				Fragment is inside React library so need to import every time.
 		- Rule6: JSX Expressions=> We can directly use strings no need of $ using {example}.
-					Rule1 for JSX Expressions=>
-						- We Cannot write conditional statements in jsx expressions except ternary operator.
-						- 
+					Rules for JSX Expressions=>
+						- We should not write console statement inside expressions. 
+						- We Cannot write conditional statements in jsx expressions except ternary operators and short circuits.
+						  Short circuit=> A && B => If first statement is true then only second statement will be checked.		 
+										  A || B => If first statement is true then will not check next expression
+						- We cannot use all looping statements in expression we can only use higher order functions which returns as we want to return changes on UI
+		- Convention: return Statement should be on same line for multiple lines we prefer to use () 
+
+States and State management => Redux is used to managing state
+
+Types of components- 
+- Function Based components
+
+- Class Based components(CBC)
+	- Stateful components=> It has its own state it can be obj or null.
+	- CBC is one of the traditional way of creating component in react
+	- CBC will use class to create component
+
+	Class Based Components (CBC)
+	1. Will use classes for creating components.
+	2. extends Component from react
+	3. Has constructor and super call statement. 
+	4. Must use render method.Inside that we return component.It will return and directly changes occurs in main 
+	5. Stateful component=> It has inbuilt state and to handle this state we have setState method.
+	6. We cannot use hooks in class based components.
+	7. We have inbuilt life cycle methods in CBC. Ex constructor, render, getDerivedStateFromProps(), componentDidMount
+	
+ 
+	Function Based components (FBC)  //Shortcut=> rafce=> will give boilerplate
+	1. Will use functions to creating components.
+	2. Does not extend Component.
+	3. Does not have constructor and  super call statement.
+	4. Does not need render method.It will return jsx to caller or parent element.
+	5. FBC are stateless component means that it will not have its own state and setState method.
+	6. If we want to have state in function based component we have to use some extra hooks for ex. useState hook
+	7. FBC does not have any inbuilt methods for managing life cycles so to achieve lifecycle method we have to use hook called as useEffect.
+
 
