@@ -23,7 +23,17 @@
 
 // React=> 
 - JavaScript library which is used to create single page application.
-- JSAP CSS animation library	
+- JSAP CSS animation library
+
+//React features and characteristics=>
+- It follows component based architecture
+- It is declarative in nature(already declared). ex. we dont need to write/use dom.No need to write some logics. Cause already declared.React provides inbuilt hooks for different functionalities We just have to use them.
+- Write once use anywhere.
+
+
+
+
+- (Imperative=> need to write logic)
 
 // Library vs Framework
    	- Library => - Collection of reusable Block of code
@@ -168,10 +178,10 @@ ex. let Footer=()=> {
 
 States and State management => Redux is used to managing state
 
-Types of components- 
-- Function Based components
+//Types of components- 
+	- Function Based components
 
-- Class Based components(CBC)
+-a Class Based components(CBC)
 	- Stateful components=> It has its own state it can be obj or null.
 	- CBC is one of the traditional way of creating component in react
 	- CBC will use class to create component
@@ -194,5 +204,24 @@ Types of components-
 	5. FBC are stateless component means that it will not have its own state and setState method.
 	6. If we want to have state in function based component we have to use some extra hooks for ex. useState hook
 	7. FBC does not have any inbuilt methods for managing life cycles so to achieve lifecycle method we have to use hook called as useEffect.
+
+// Hot Module Replace=> 
+	- One of the most useful feature offered by package bundlers.
+	- It allows all kind of modules to be updated at runtime without need of full refresh
+	- Not Intended to use in production used only in dev phase.
+	- Ex. In html when we change any heading the data entered into input tag will vanished but in react if we update heading input fields data will remain as it is.
+
+
+// Hooks
+- This are inbuilt function/methods 
+- Hooks names starts with use ex. useState, useEffect, useContext, useCallback, useReducer ,useMemo.
+- We can create any function and will name it use(XYZ) such functions can be treated as custom hooks.Ex. useAdd
+
+1. useState=>
+array of 2
+destructure to access
+first is state and second is func setState 
+pass value in parameter
+when you change state your entire component will get loaded by Default
 
 
