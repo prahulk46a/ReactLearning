@@ -28,7 +28,7 @@
 //React features and characteristics=>
 - It follows component based architecture
 - It is declarative in nature(already declared). ex. we dont need to write/use dom.No need to write some logics. Cause already declared.React provides inbuilt hooks for different functionalities We just have to use them.
-- Write once use anywhere.
+- Write once use anywhere. You can create functionality that are used multiple times. example. Create Button component once and use anywhere in application 
 
 
 
@@ -88,9 +88,13 @@
 		- 
 - eslint.conflict.js=> It is the package which confirms syntax validation in building react application(analogous to java compiler)
 - index.html=> Single html file. we do not add anything inside that.Inside that there is only single div with id root.
-- package.json=>- It is like dashboard of entire react application where you get important limited info related to packages like version.
+- package.json=>- It is like dashboard of entire react application where you get important limited info related to packages like version.^version => rangr upto cerain patches
 				- devDependencies=> dependencies required only for development and not required after deployment.Majour dependencies like eslint,react,vite etc.
-- package-Lock.json=> Similar to like package.json but detailed logs present related to react file
+				- Script=> Inside package.jsom there is prop script this scripts are mapped with certain action.
+						   for ex. in vite based project we use vite in create react app way we use npx so what this script will do,
+						   it will get executed when added after npm run "scriptname" here dev to run project common script for all similar operations
+
+- package-Lock.json=> Similar to like package.json. It will have exact version of dependencies download also that dependency is dependant on what that is present.
 - vite.config.js=> Information about vite configuration.
 
 // Code flow=>
@@ -118,6 +122,8 @@ Reconciliation process=> Process of implementing the changes from virtual dom to
 - Over 21 lakhs Packages
 - In-order to download multiple packages => ex. npm install react babel react-dom.
 - Node js will find package and downloads using npm cmds
+
+//npm is node package manager but sometimes you want to directly execute some packages then npx(Node package executer) comes into picture
 
 // Main.jsx=>
 - Strict mode=> Checks js code double 
@@ -222,6 +228,38 @@ array of 2
 destructure to access
 first is state and second is func setState 
 pass value in parameter
-when you change state your entire component will get loaded by Default
+when you change state your entire component will get loaded by Default means every line will gel executed again
+present into react library so need to import everytime when we want to use.
 
 
+Props 
+- Props is properties which is used to send data from one component to another component in form of obj.
+- This obj is immutable in child component. 
+- Props are present in both class-based and function-based comp. 
+
+props vs States
+- Props are immutable vs states are mutable.
+- States are only comp level only but props are multiple components level. 
+- If objects we want to send we have to wrap into curly braces
+- We can send functions also in prop
+- When we want to show that data from 
+
+
+
+
+React Important Questions
+- React and features,advantages,disadvantages of react =>(Single page application and Declarative expected most)
+- Library vs framework  with examples
+- Virtual dom=> React will maintain 
+- DIffing algo
+- Virtual dom and React dom difference
+- Reconciliation and fiber difference
+- Folder structure and uses of each file=> (Node module, Scripts in package.json) 
+- What are components and what is component based architecture.
+- Types of components => class-based ,Function-based 
+- What is Hooks
+- What is Lifecycle methods.  
+- Props 
+- Main.jsx internals =. React dom, CreateRoot, render method
+- Use of cdn links
+- 
