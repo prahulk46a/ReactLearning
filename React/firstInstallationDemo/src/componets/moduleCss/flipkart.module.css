@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#header{
+    border: 1px solid black;
+    height:10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header> #logo{
+    border: 1px solid blue;
+    height:8vh;
+    width: 50%;
+}
+
+#header> #searchbar{
+    border: 1px solid black;
+    height:8vh;
+    width: 40%;
+}
+
+

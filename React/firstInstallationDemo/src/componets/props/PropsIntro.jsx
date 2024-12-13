@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Child from './Child';
 import CounterProps from './CounterProps';
 import Color from './Color';
+import ModuleCssEx from '../moduleCss/ModuleCssEx';
 
 const PropsIntro = () => {
     // const obj={
@@ -259,11 +260,12 @@ const data=[
   return (
     <div>
         {/* {count} */}
-        <Child   val={data}/>
+        {/* <Child   val={data}/> */}
         {/* <CounterProps  data2={updateCount} /> {count} <CounterProps/> */}
         {/* <Color data="red"/>
         <Color data="green"/>
         <Color data="blue"/> */}
+        <ModuleCssEx/>
 
 
 
