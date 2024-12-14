@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Child from './Child';
 import CounterProps from './CounterProps';
 import Color from './Color';
-import ModuleCssEx from '../moduleCss/ModuleCssEx';
+
 
 const PropsIntro = () => {
     // const obj={
@@ -265,7 +265,7 @@ const data=[
         {/* <Color data="red"/>
         <Color data="green"/>
         <Color data="blue"/> */}
-        <ModuleCssEx/>
+        
 
 
 

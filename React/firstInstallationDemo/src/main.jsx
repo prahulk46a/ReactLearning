@@ -5,6 +5,8 @@ import './index.css'
 import PropsIntro from './componets/props/PropsIntro'
 import UseStateIntro from './componets/hooks/useStateHook/UseStateIntro'
 import UseEffectIntro from './componets/hooks/useEffectHook/UseEffectIntro'
+import ModuleCssEx from './componets/ModuleBasedCssExample/ModuleCssEx'
+import Home from './componets/conditionalRendering/Home'
 // import JsxRules from './componets/jsx_intro/jsx_rules/JsxRules.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -12,8 +14,10 @@ createRoot(document.getElementById('root')).render(
     {/* <JsxRules></JsxRules> */}
     {/* <ClassBasedComp/> */}
     {/* <UseStateIntro/> */}
-    <PropsIntro/>
+    {/* <PropsIntro/> */}
     {/* <UseEffectIntro/> */}
+    {/* <ModuleCssEx/> */}
+    <Home/>
 
   </div>
 )

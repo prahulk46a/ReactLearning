@@ -1,6 +1,7 @@
 import React from 'react'
-import style from './flipkart.module.css'
-const FlipkartHeader = () => {
+import style from './navbar.module.css'
+const FlipkartHeader = (props) => {
+  console.log(props);
   return (
     <header id={style.header}>
         <article id={style.logo}>

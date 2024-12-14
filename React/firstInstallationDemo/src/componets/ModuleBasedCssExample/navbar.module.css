@@ -14,13 +14,13 @@
 #header> #logo{
     border: 1px solid blue;
     height:8vh;
-    width: 50%;
+    width: 40%;
 }
 
 #header> #searchbar{
     border: 1px solid black;
     height:8vh;
-    width: 40%;
+    width: 90%;    
 }
 
 
