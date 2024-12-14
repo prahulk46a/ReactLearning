@@ -236,6 +236,7 @@ Props
 - Props is properties which is used to send data from one component to another component in form of obj.
 - This obj is immutable in child component. 
 - Props are present in both class-based and function-based comp. 
+- It is unidirectional
 
 props vs States
 - Props are immutable vs states are mutable.
@@ -247,7 +248,26 @@ props vs States
 
 
 
-React Important Questions
+JavaScript + React Important Questions
+- let vsr const difference
+- Functions ->types ,generator functions
+- this keyword 
+- objects
+- Arrays- String
+- Closures
+- De-structuring 
+- Promises 
+- Async await
+- Call apply bind 
+- Hoisting
+- 
+
+
+
+
+
+
+
 - React and features,advantages,disadvantages of react =>(Single page application and Declarative expected most)
 - Library vs framework  with examples
 - Virtual dom=> React will maintain 
@@ -262,4 +282,9 @@ React Important Questions
 - Props 
 - Main.jsx internals =. React dom, CreateRoot, render method
 - Use of cdn links
+
+
+# Props drilling
+- Sending a data through multiple nested components is props drilling A=>B=>C
+- We must avoid prop drilling.Done using HOC Context API Redux/Redux Toolkit
 - 
