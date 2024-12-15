@@ -13,11 +13,24 @@ import MainDiv from "./Example2_components/MainDiv";
 
 
 //Example2
-let App=()=> {
-    return (
-      <div id="app">
-          <MainDiv></MainDiv>
-      </div>
-    )
+// let App=()=> {
+//     return (
+//       <div id="app">
+//           <MainDiv></MainDiv>
+//       </div>
+//     )
+// }
+// export default App;
+
+import React from 'react'
+import Home from "./Example3_Ecom/Home";
+
+const App = () => {
+  return (
+    <div>
+      <Home/>
+    </div>
+  )
 }
-export default App;
+
+export default App
