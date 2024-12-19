@@ -13,6 +13,7 @@ const Cart = ({ cartItems }) => {
               <img id={style.cartImage} src={item.image} alt={item.name}></img>
               <h2> {item.title}</h2>  
               <p>${item.price}</p>
+              {/* <p>{item.description}</p> */}
             </div>
           ))}
         </div>

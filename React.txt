@@ -161,9 +161,10 @@ ex. let Footer=()=> {
     )
   } 
   
-
-
-  // JSX=> 
+	//Old way to create=> https://react.dev/reference/react/createElement
+	React.createElement(parent-tag,attributes,child-tag/content)=> React.createElement('div',{id:"myDiv",style:""},'<p>')
+  	
+	// JSX=> 
   - JavaScript and xml
   - Html look like structure but not html
   - While writing jsx we have to follow some rules=>
@@ -181,6 +182,7 @@ ex. let Footer=()=> {
 										  A || B => If first statement is true then will not check next expression
 						- We cannot use all looping statements in expression we can only use higher order functions which returns as we want to return changes on UI
 		- Convention: return Statement should be on same line for multiple lines we prefer to use () 
+		- In JSX expression we should not write object, array, null, undefined, boolean,BigInt.=> Strings and number only
 
 States and State management => Redux is used to managing state
 
@@ -229,14 +231,17 @@ destructure to access
 first is state and second is func setState 
 pass value in parameter
 when you change state your entire component will get loaded by Default means every line will gel executed again
-present into react library so need to import everytime when we want to use.
-
+present into react library so need to import every time when we want to use.
+if you want recheck entire component then useState is used. when cart is changed price associated should also changed using static variables this is not possible
+This is asynchronous in nature
 
 Props 
 - Props is properties which is used to send data from one component to another component in form of obj.
 - This obj is immutable in child component. 
 - Props are present in both class-based and function-based comp. 
 - It is unidirectional
+- React Props are read-only! You will get an error if you try to change their value.
+- Default props=>
 
 props vs States
 - Props are immutable vs states are mutable.
@@ -245,7 +250,15 @@ props vs States
 - We can send functions also in prop
 - When we want to show that data from 
 
+Default props => 
+- We can pass some default value to props using Destructuring 
+- For child component we can set some default value as props for ex.let child=({car="xyz"}).
+- At any instance if parent component not sending car prop then default value xyz will taken
 
+PropChildren=> What ever code you add inside jsx component call then it will not displayed it will stored in props children when we want to access  that then we need to display it like (props.children)
+
+Conditional Rendering=>
+- 
 
 
 JavaScript + React Important Questions
@@ -287,4 +300,12 @@ JavaScript + React Important Questions
 # Props drilling
 - Sending a data through multiple nested components is props drilling A=>B=>C
 - We must avoid prop drilling.Done using HOC Context API Redux/Redux Toolkit
+- 
+
+
+# Tailwind css
+- 
+
+
+# Events
 - 

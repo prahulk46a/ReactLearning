@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Child from './Child';
 import CounterProps from './CounterProps';
 import Color from './Color';
+import Product from './Product';
 
 
 const PropsIntro = () => {
@@ -265,6 +266,8 @@ const data=[
         {/* <Color data="red"/>
         <Color data="green"/>
         <Color data="blue"/> */}
+
+        <Product gift={{name:"Rahul",Age:"23"}}></Product>
         
 
 
