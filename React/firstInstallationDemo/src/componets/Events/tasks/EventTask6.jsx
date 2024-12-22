@@ -4,7 +4,7 @@ const EventTask6 = () => {
     const handleShake = (e) => {
         const button = e.target;
     
-        
+        console.log(e);
         button.classList.add("shake");
     
         

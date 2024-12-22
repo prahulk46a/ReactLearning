@@ -234,6 +234,7 @@ when you change state your entire component will get loaded by Default means eve
 present into react library so need to import every time when we want to use.
 if you want recheck entire component then useState is used. when cart is changed price associated should also changed using static variables this is not possible
 This is asynchronous in nature
+States should not be set in global as it get readed once more time and it will again store state it will go infinite
 
 Props 
 - Props is properties which is used to send data from one component to another component in form of obj.
