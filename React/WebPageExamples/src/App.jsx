@@ -1,6 +1,6 @@
 import MainDiv from "./Example2_components/MainDiv";
 
-//Example1
+// Example1
 // let App=()=> {
 //   return (
 //     <div id="app">
@@ -12,7 +12,7 @@ import MainDiv from "./Example2_components/MainDiv";
 // }
 
 
-//Example2
+// Example2
 // let App=()=> {
 //     return (
 //       <div id="app">
@@ -22,13 +22,29 @@ import MainDiv from "./Example2_components/MainDiv";
 // }
 // export default App;
 
+// Example3
+// import React from 'react'
+// import Home from "./Example3_Ecom/Home";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Home/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import Home from "./Example3_Ecom/Home";
+
+import Signup from "./Example4_signIn.jsx/Signup";
 
 const App = () => {
   return (
-    <div>
-      <Home/>
+    <div> 
+      <Signup></Signup>
     </div>
   )
 }

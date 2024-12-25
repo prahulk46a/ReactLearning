@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* 
 Example1.css
 *{
@@ -184,6 +189,11 @@ Example1.css
   border: 2px solid black;
 }
  */
+ 
+ 
+ /* Example 2
+ 
+ 
  *{
   padding: 0;
   margin: 0;
@@ -375,4 +385,6 @@ Example1.css
  #h4_box2>p{
   font-size: 16px;
   padding: 10px;
- }
+ } */
+
+

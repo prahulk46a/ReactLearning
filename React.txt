@@ -258,8 +258,69 @@ Default props =>
 
 PropChildren=> What ever code you add inside jsx component call then it will not displayed it will stored in props children when we want to access  that then we need to display it like (props.children)
 
+
+# Props drilling
+- Sending a data through multiple nested components is props drilling A=>B=>C
+- We must avoid prop drilling.Done using HOC Context API Redux/Redux Toolkit
+- 
+
 Conditional Rendering=>
 - 
+
+# Tailwind css
+- 
+
+
+# Events
+- 
+
+
+# React List
+
+
+# React Form
++
+
+
+Whenever we import json file then js engine will implicitly parse data into array
+
+
+
+# Lifecycle methods (LM)=> Methods that tells about the lifecycle of any component. Categorized into 3 category (Mounting phase, Updating phase, Unmounting phase)
+		- Defaulty available only in class-based components
+		- Function Based components(FBC) doesn't provide.If we want to achieve LM  in FBC we can take help of hook such as useEffect hook
+		- 3 Phases of lifecycle methods represents unique lifespan of component like 
+
+1. Mounting Phase=> - Will represent how the component is created nd how to render it on UI.
+					//Constructor()=> - Will Execute first
+									- Will Execute only once
+									- Best place for initializing variables and states as it executes only once so that same state or variable will not get reinitialized again and again.
+					//getDerivedStateFromProps()=> - Executes after constructor. This method is used to accept props from parent component and and we can write js logic inside getDerivedStateFromProps() (update state into child component).
+					//render()=> - executes after getDerivedStateFromProps.
+							   - Has return statement that returns jsx.
+							   - Render method is used to display the content on UI.
+							   
+					//componentDidMount()=> - This method executes after render method
+											- Once JSX is rendered React can perform the heavy computation/calculations or side-effects(async time taking part)
+											- Multiple side effects are fetching, Network related operation.
+											- if you are performing or handling side effects in componentDidMount after render method, render method can executes faster before this method which will help to enhance user exp.
+											- Method will executes once.
+2. Updating phase=> - Will start if user performs any actions(updation) ex.click hover form submit
+					// getDerivedStateFromProps()=> Executes after constructor. This method is used to accept props from parent component and and we can write js logic inside getDerivedStateFromProps() (update state into child component).It will have Information about current state and prop-state. Will executes multiple times
+					// shouldComponentUpdate()=> - method has informed about current state and previous state
+												 - If there are any changes in current change or previous state it will return true or else false
+												 - If method returns true then only next methods of updating phase will get executed.
+					// getSnapshotBeforeUpdate()=> - this method will execute only if shouldComponent returns true
+												   - This method stores the previous value of state with it and we can use it if required
+					// render()=> - update state on  the UI
+					// ComponentDidUpdate()=>//just async side-effects performed - This method will check the changes into state and based on that it will handle the side effects.
+					
+
+3. Unmounting phase => - Has only one method that is ComponentWillUnmount()
+					   - Returns function in which we can stop or clear ongoing task in current component
+					   - Phase will occur if we/User navigates from one component to another component
+					   - ComponentWillUnmount Method will be used to clear ongoing task into current component before navigating to another component. Ex. Set any interval into current component we can clear that interval in this method before we navigate to another component
+
 
 
 JavaScript + React Important Questions
@@ -281,7 +342,6 @@ JavaScript + React Important Questions
 
 
 
-
 - React and features,advantages,disadvantages of react =>(Single page application and Declarative expected most)
 - Library vs framework  with examples
 - Virtual dom=> React will maintain 
@@ -296,17 +356,3 @@ JavaScript + React Important Questions
 - Props 
 - Main.jsx internals =. React dom, CreateRoot, render method
 - Use of cdn links
-
-
-# Props drilling
-- Sending a data through multiple nested components is props drilling A=>B=>C
-- We must avoid prop drilling.Done using HOC Context API Redux/Redux Toolkit
-- 
-
-
-# Tailwind css
-- 
-
-
-# Events
-- 

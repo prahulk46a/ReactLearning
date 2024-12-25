@@ -22,7 +22,7 @@ const EventExample5 = () => {
   }
   return (
     <div className="p-10"> 
-        <h1 className='text-orange-400 text-4xl font-extrabold'>Signup Form</h1>
+        <h1 className='text-orange-400 text-4xl font-extrabold italic'>Signup Form</h1>
         <br></br>
         <form action="" onSubmit={handleSubmit}  >
             <input
