@@ -2,6 +2,7 @@ import React from 'react'
 
 const CounterProps = (prop) => {
     console.log(prop);
+    
   return (
     <div> 
         <button onClick={()=>{

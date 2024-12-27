@@ -261,13 +261,13 @@ const data=[
   return (
     <div>
         {/* {count} */}
-        {/* <Child   val={data}/> */}
-        {/* <CounterProps  data2={updateCount} /> {count} <CounterProps/> */}
+        <Child   val={data}/>
+        {/* <CounterProps  data2={updateCount} /> {count} <CounterProps/> */} {/* data2 will be props for counterProps here count is prop.child*/}
         {/* <Color data="red"/>
         <Color data="green"/>
         <Color data="blue"/> */}
 
-        <Product gift={{name:"Rahul",Age:"23"}}></Product>
+        {/* <Product gift={{name:"Rahul",Age:"23"}}></Product> */}
         
 
 
