@@ -149,7 +149,7 @@ Reconciliation process=> Process of implementing the changes from virtual dom to
 
 														child n
 
-
+Javascript logic Inside jsx component
 - It is recommended to write into component but outside of that return statement
 - jsx expressions=> Used to add js into html=> 
 ex. let Footer=()=> {
@@ -160,7 +160,6 @@ ex. let Footer=()=> {
       </div>
     )
   } 
-  
 	//Old way to create=> https://react.dev/reference/react/createElement
 	React.createElement(parent-tag,attributes,child-tag/content)=> React.createElement('div',{id:"myDiv",style:""},'<p>')
   	
@@ -204,7 +203,7 @@ States and State management => Redux is used to managing state
 	7. We have inbuilt life cycle methods in CBC. Ex constructor, render, getDerivedStateFromProps(), componentDidMount
 	
  
-	Function Based components (FBC)  //Shortcut=> rafce=> will give boilerplate
+	Function Based components (FBC)  //Shortcut=> rafce => will give boilerplate
 	1. Will use functions to creating components.
 	2. Does not extend Component.
 	3. Does not have constructor and  super call statement.
@@ -234,7 +233,7 @@ when you change state your entire component will get loaded by Default means eve
 present into react library so need to import every time when we want to use.
 if you want recheck entire component then useState is used. when cart is changed price associated should also changed using static variables this is not possible
 This is asynchronous in nature
-States should not be set in global as it get readed once more time and it will again store state it will go infinite
+States should not be set in global as it get read once more time and it will again store state it will go infinite
 
 Props 
 - Props is properties which is used to send data from one component to another component in form of obj.
@@ -305,6 +304,8 @@ Whenever we import json file then js engine will implicitly parse data into arra
 											- Multiple side effects are fetching, Network related operation.
 											- if you are performing or handling side effects in componentDidMount after render method, render method can executes faster before this method which will help to enhance user exp.
 											- Method will executes once.
+											- UseEffect simple empty dependencies is like this method. It will get execute once in entire lifecyle
+
 2. Updating phase=> - Will start if user performs any actions(updation) ex.click hover form submit
 					// getDerivedStateFromProps()=> Executes after constructor. This method is used to accept props from parent component and and we can write js logic inside getDerivedStateFromProps() (update state into child component).It will have Information about current state and prop-state. Will executes multiple times
 					// shouldComponentUpdate()=> - method has informed about current state and previous state
@@ -313,15 +314,50 @@ Whenever we import json file then js engine will implicitly parse data into arra
 					// getSnapshotBeforeUpdate()=> - this method will execute only if shouldComponent returns true
 												   - This method stores the previous value of state with it and we can use it if required
 					// render()=> - update state on  the UI
-					// ComponentDidUpdate()=>//just async side-effects performed - This method will check the changes into state and based on that it will handle the side effects.
+					// ComponentDidUpdate()=>//just async side-effects performed - This method will check the changes into state and based on that it will handle the side effects.Can execute multiple times.
 					
-
 3. Unmounting phase => - Has only one method that is ComponentWillUnmount()
 					   - Returns function in which we can stop or clear ongoing task in current component
 					   - Phase will occur if we/User navigates from one component to another component
 					   - ComponentWillUnmount Method will be used to clear ongoing task into current component before navigating to another component. Ex. Set any interval into current component we can clear that interval in this method before we navigate to another component
 
 
+
+
+//UseEffect=> Higher order component syntax=> (()=>{},[dependencies array])
+			- Without dependency array it act as normal block only.
+			- whenever a change is occurred in any of dependency passed in dependency array then that useEffect will gel called.
+			- you can pass multiple dependencies in single use effect and on change of any single dependency useEffect wil get called
+			- It will execute at the end of mounting phase.
+			- If we pass any dependency into dependency array useEffects call back func will get called  only when there is change into dependency.this useEffect call back function wil get called every time then change in  state of dependency value. 
+ 
+
+//ContextApi=>steps
+
+
+- Used to avoid props drilling.
+- Here we have to create global context/store.It will store all the data that is required globally
+- Data is provided by context that we created throughout the application.
+- We have to use context api in 3 steps:
+- create context , link context, provide context
+- Creating a Context object
+	import { createContext } from "react";
+	const AppContext = createContext();
+
+- Link context=> We want context to all the application for this we have to wrap app.jsx call in AppContext
+	<AppContextProvider>
+       <App/>
+    </AppContextProvider>
+
+- Provide context=> We will provide data to the props.children using contextObj.provider
+	export const CountProvider = ({ children }) => {
+		return (
+			<CountContext.Provider value={{ count, incrementCount }}>
+			{children} {/* Render whatever is passed inside */}
+			</CountContext.Provider>
+		);
+	};
+To use data provided into context we have to use hook called useContext. Use ContextHook will ask for an argument which should be context obj that is being exported from app context
 
 JavaScript + React Important Questions
 - let vsr const difference

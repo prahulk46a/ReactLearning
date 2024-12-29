@@ -12,6 +12,9 @@ import MainPage from './componets/conditionalRendering/example2/MainPage'
 import EventIntro from './componets/Events/EventIntro'
 import UseEffectMain from './componets/hooks/useEffectHook/UseEffectMain'
 import ContextApiIntro from './componets/context_api/ContextApiIntro'
+import Parent from './componets/bidirectionalFlow/Parent'
+import UseRefIntro from './componets/hooks/useRefHook/UseRefIntro'
+
 // import JsxRules from './componets/jsx_intro/jsx_rules/JsxRules.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -27,6 +30,9 @@ createRoot(document.getElementById('root')).render(
     {/* <MainPage/> */}
     {/* <EventIntro/> */}
     {/* <UseEffectMain/> */}
-    <ContextApiIntro/>
+    {/* <ContextApiIntro/> */}
+    {/* <Parent/> */}
+    <UseRefIntro/>
+    
   </div>
 )
