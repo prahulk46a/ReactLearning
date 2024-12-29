@@ -14,6 +14,7 @@ import UseEffectMain from './componets/hooks/useEffectHook/UseEffectMain'
 import ContextApiIntro from './componets/context_api/ContextApiIntro'
 import Parent from './componets/bidirectionalFlow/Parent'
 import UseRefIntro from './componets/hooks/useRefHook/UseRefIntro'
+import TaskIntro from './componets/hooks/tasks/TaskIntro'
 
 // import JsxRules from './componets/jsx_intro/jsx_rules/JsxRules.jsx'
 
@@ -32,7 +33,8 @@ createRoot(document.getElementById('root')).render(
     {/* <UseEffectMain/> */}
     {/* <ContextApiIntro/> */}
     {/* <Parent/> */}
-    <UseRefIntro/>
+    {/* <UseRefIntro/> */}
+    <TaskIntro/>
     
   </div>
 )
