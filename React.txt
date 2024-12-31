@@ -359,6 +359,29 @@ Whenever we import json file then js engine will implicitly parse data into arra
 	};
 To use data provided into context we have to use hook called useContext. Use ContextHook will ask for an argument which should be context obj that is being exported from app context
 
+
+# useReducer Hook=>
+- Use reducer hook is the alternative for useState hook for managing state in custom way.   
+- It helps to manage complex states and logic better than useState hook
+- UseReducer hook with context api is the most commonly used pattern in react applications
+- Syntax=> const[state,dispatchFunc]=useReducer(reducer,initialState);
+			State=> Hold the value passed to initial state variable
+			dispatchFunc=> Dispatch is the function which is stored in reference called reducer.it is used to call whenever needed
+			reducer=> - function which accepts 2 arg  that is current state and action, this action is argument passed to dispatch call.
+					- The action can be any string, number, or any data type but most commonly it will be obj which can have type and value prop.
+					- In your reducer function usually we write switch case  and in that switch case will be action.type. and based on that case(action.type)we can return updated state.
+			initialState=> State that is assigned at first
+
+ex.=> <button onClick=(()=>{dispatch({type:"add",val:"10"})})>   reducer=(state,action)=>{switch "action" case "action.type" }
+
+
+#UseMemo=> 
+- Used to achieve performance optimization in react application 
+- UseMemo hook will return memoized value
+- Syntax=> const memoizedVal=useMmo(callbackFunction,dependency array[])
+- Your callback funct passed to useMemo hook if has any expensive/heavy computation. so it could affect entire application performance but as it is passed as use with UseMemoHook it wont get called on each component rerender.
+  It will get called only when there are some changes in dependencies and it will return memoized value. 
+
 JavaScript + React Important Questions
 - let vsr const difference
 - Functions ->types ,generator functions
