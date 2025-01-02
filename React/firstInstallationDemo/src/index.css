@@ -26,8 +26,6 @@
   animation: shake 0.5s ease;
 }
 
-
-
 /* Add this to your CSS file */
 .rainbow {
   animation: rainbow 7s linear infinite; /* Infinite animation with a 3s duration */
@@ -57,7 +55,6 @@
     background-color: violet;
   }
 }
-
 
 /* Initial blurred state */
 .blurred {

@@ -17,6 +17,7 @@ import UseRefIntro from "./componets/hooks/useRefHook/UseRefIntro";
 import TaskIntro from "./componets/hooks/tasks/TaskIntro";
 import UseReducerIntro from "./componets/hooks/useReducer/UseReducerIntro";
 import UseMemoIntro from "./componets/hooks/useMemo/UseMemoIntro";
+import HocIntro from "./componets/hoc/HocIntro";
 
 // import JsxRules from './componets/jsx_intro/jsx_rules/JsxRules.jsx'
 
@@ -38,6 +39,7 @@ createRoot(document.getElementById("root")).render(
     {/* <UseRefIntro/> */}
     {/* <TaskIntro /> */}
     {/* <UseReducerIntro /> */}
-    <UseMemoIntro />
+    {/* <UseMemoIntro /> */}
+    <HocIntro />
   </div>
 );

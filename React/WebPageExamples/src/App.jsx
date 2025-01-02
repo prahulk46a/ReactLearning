@@ -11,7 +11,6 @@ import MainDiv from "./Example2_components/MainDiv";
 //   )
 // }
 
-
 // Example2
 // let App=()=> {
 //     return (
@@ -36,17 +35,29 @@ import MainDiv from "./Example2_components/MainDiv";
 
 // export default App
 
+// import React from 'react'
 
-import React from 'react'
+// import Signup from "./Example4_signIn.jsx/Signup";
 
-import Signup from "./Example4_signIn.jsx/Signup";
+// const App = () => {
+//   return (
+//     <div>
+//       <Signup></Signup>
+//     </div>
+//   )
+// }
+
+// export default App
+
+import React from "react";
+import Todo from "./Example5_Todolist/Todo";
 
 const App = () => {
   return (
-    <div> 
-      <Signup></Signup>
+    <div>
+      <Todo />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
