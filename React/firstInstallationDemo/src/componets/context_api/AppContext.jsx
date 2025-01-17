@@ -8,7 +8,7 @@ const AppContext = ({children}) => {  //
     <div>
       {/*All things wrapped inside react jsx component will be prop.children for child component*/}
       <myContext.Provider value={{state,setState}}> {/* provide state and setState into context*/}
-        {children}        //
+        {children}        
       </myContext.Provider>
     </div>
   )

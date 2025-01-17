@@ -29,10 +29,6 @@
 - It follows component based architecture
 - It is declarative in nature(already declared). ex. we dont need to write/use dom.No need to write some logics. Cause already declared.React provides inbuilt hooks for different functionalities We just have to use them.
 - Write once use anywhere. You can create functionality that are used multiple times. example. Create Button component once and use anywhere in application 
-
-
-
-
 - (Imperative=> need to write logic)
 
 // Library vs Framework
@@ -195,7 +191,7 @@ States and State management => Redux is used to managing state
 
 	Class Based Components (CBC)
 	1. Will use classes for creating components.
-	2. extends Component from react
+	2. Extends Component from react
 	3. Has constructor and super call statement. 
 	4. Must use render method.Inside that we return component.It will return and directly changes occurs in main 
 	5. Stateful component=> It has inbuilt state and to handle this state we have setState method.
@@ -224,16 +220,88 @@ States and State management => Redux is used to managing state
 - Hooks names starts with use ex. useState, useEffect, useContext, useCallback, useReducer ,useMemo.
 - We can create any function and will name it use(XYZ) such functions can be treated as custom hooks.Ex. useAdd
 
-1. useState=>
-array of 2
-destructure to access
-first is state and second is func setState 
-pass value in parameter
-when you change state your entire component will get loaded by Default means every line will gel executed again
-present into react library so need to import every time when we want to use.
-if you want recheck entire component then useState is used. when cart is changed price associated should also changed using static variables this is not possible
-This is asynchronous in nature
-States should not be set in global as it get read once more time and it will again store state it will go infinite
+1. useState =>
+- Array of 2
+- Destructure to access
+- First is state and second is func setState 
+- Pass value in parameter
+- when you change state your entire component will get loaded by Default means every line will gel executed again
+- present into react library so need to import every time when we want to use.
+- If you want recheck entire component then useState is used. when cart is changed price associated should also changed using static variables this is not possible
+- This is asynchronous in nature
+- States should not be set in global as it get read once more time and it will again store state it will go infinite
+
+
+
+2. useEffect =>
+- Higher order component syntax=> (()=>{},[dependencies array])
+- Without dependency array it act as normal block only.
+- Whenever a change is occurred in any of dependency passed in dependency array then that useEffect will get called.
+- You can pass multiple dependencies in single use effect and on change of any single dependency useEffect wil get called
+- It will execute at the end of mounting phase.
+- If we pass any dependencies into dependency array useEffects call back func will get called  only when there is change into any dependency.
+  This useEffect call back function wil get called every time then change in  state of dependency value. 
+- It replaces the classic React functions componentDidMount , componentDidUpdate , and componentWillUnmount with a shorter and simpler syntax.
+- Runs after rendering when dependencies change.
+- Common Use Cases	- Fetching data  - Setting up subscriptions  - Manipulating the DOM
+					- Adding event listeners	
+
+
+3. useReducer => 
+- Use reducer hook is the alternative for useState hook for managing state in custom way.   
+- It helps to manage complex states and logic better than useState hook
+- UseReducer hook with context api is the most commonly used pattern in react applications
+- Syntax=> const[state,dispatchFunc]=useReducer(reducer,initialState);
+			State=> Hold the value passed to initial state variable
+			dispatchFunc=> Dispatch is the function which is stored in reference called reducer.it is used to call whenever needed
+			reducer=> - function which accepts 2 arg  that is current state and action, this action is argument passed to dispatch call.
+					- The action can be any string, number, or any data type but most commonly it will be obj which can have type and value prop.
+					- In your reducer function usually we write switch case  and in that switch case will be action.type. and based on that case(action.type)we can return updated state.
+			initialState=> State that is assigned at first
+
+ex.=> <button onClick=(()=>{dispatch({type:"add",val:"10"})})>   reducer=(state,action)=>{switch "action" case "action.type" }
+
+
+
+4. useMemo =>
+- What it will do=> Whenever there is any time taking activity that affects entire application unnecessarily 
+- ex.If there is 2 state one has time taking code and other is small time taking code whenever any state change occurs it affects entire application to avoid this we will render time taking activity only if time taking state changes. 
+- i.e react will remember(memoized) state and not recalculate again.
+- Think of memoization as caching a value so that it does not need to be recalculated.
+syntax=>	const memoizedValue = useMemo(() => {
+				return computedValue;				//dependencies passed in array changes then only this block get executed
+			}, [dependencies]);  		
+https://chatgpt.com/share/678ac047-ba04-8013-b7c4-206230d8fe65 =>useMomo vs useEffect
+
+const expensiveValue = useMemo(() => {
+    console.log("Calculating...");
+    return while(i<100000000000){count++}; 				// Simulate an expensive calculation
+  }, [count]); 										// Recalculates only when `count` changes
+
+- Recomputes value during rendering when dependencies change.
+- Common Use cases - Memoizing derived data  -Optimizing expensive computations  -Reducing unnecessary re-renders
+
+
+React.memo=>- Every single time state change unnecessarily child also get rerender even if no update is there this can be avoided using React.memo
+			- React.memo is a higher-order component (HOC) in React that optimizes the rendering of functional components by preventing unnecessary re-renders. 
+			- It works by memoizing the result of the component's last render and reusing it if the props haven't changed.
+
+5. useCallback =>
+- The React useCallback Hook returns a memoized callback function.
+- Every time state changes component re-renders and function every time get created. Since funct which is passes as prop get change then child also get re-render.
+- useCallback renders funct only when change in funct passed in dependency array occurs causing stop of unnecessarily rendering of child comp 
+- This allows us to isolate resource intensive functions so that they will not automatically run on every render.
+- The useCallback Hook only runs when one of its dependencies update .
+- Recreates function during rendering when dependencies change.
+
+
+6. useContext =>
+
+
+7. useRef =>
+
+
+
 
 Props 
 - Props is properties which is used to send data from one component to another component in form of obj.
@@ -290,7 +358,7 @@ Whenever we import json file then js engine will implicitly parse data into arra
 		- Function Based components(FBC) doesn't provide.If we want to achieve LM  in FBC we can take help of hook such as useEffect hook
 		- 3 Phases of lifecycle methods represents unique lifespan of component like 
 
-1. Mounting Phase=> - Will represent how the component is created nd how to render it on UI.
+1. Mounting Phase=> - Will represent how the component is created and how to render it on UI.
 					//Constructor()=> - Will Execute first
 									- Will Execute only once
 									- Best place for initializing variables and states as it executes only once so that same state or variable will not get reinitialized again and again.
@@ -304,7 +372,7 @@ Whenever we import json file then js engine will implicitly parse data into arra
 											- Multiple side effects are fetching, Network related operation.
 											- if you are performing or handling side effects in componentDidMount after render method, render method can executes faster before this method which will help to enhance user exp.
 											- Method will executes once.
-											- UseEffect simple empty dependencies is like this method. It will get execute once in entire lifecyle
+											- In FBC, we can achieve this using UseEffect with simple empty dependencies . It will get execute once in entire lifecycle
 
 2. Updating phase=> - Will start if user performs any actions(updation) ex.click hover form submit
 					// getDerivedStateFromProps()=> Executes after constructor. This method is used to accept props from parent component and and we can write js logic inside getDerivedStateFromProps() (update state into child component).It will have Information about current state and prop-state. Will executes multiple times
@@ -324,12 +392,7 @@ Whenever we import json file then js engine will implicitly parse data into arra
 
 
 
-//UseEffect=> Higher order component syntax=> (()=>{},[dependencies array])
-			- Without dependency array it act as normal block only.
-			- whenever a change is occurred in any of dependency passed in dependency array then that useEffect will gel called.
-			- you can pass multiple dependencies in single use effect and on change of any single dependency useEffect wil get called
-			- It will execute at the end of mounting phase.
-			- If we pass any dependency into dependency array useEffects call back func will get called  only when there is change into dependency.this useEffect call back function wil get called every time then change in  state of dependency value. 
+
  
 
 //ContextApi=>steps
@@ -360,20 +423,8 @@ Whenever we import json file then js engine will implicitly parse data into arra
 To use data provided into context we have to use hook called useContext. Use ContextHook will ask for an argument which should be context obj that is being exported from app context
 
 
-# useReducer Hook=>
-- Use reducer hook is the alternative for useState hook for managing state in custom way.   
-- It helps to manage complex states and logic better than useState hook
-- UseReducer hook with context api is the most commonly used pattern in react applications
-- Syntax=> const[state,dispatchFunc]=useReducer(reducer,initialState);
-			State=> Hold the value passed to initial state variable
-			dispatchFunc=> Dispatch is the function which is stored in reference called reducer.it is used to call whenever needed
-			reducer=> - function which accepts 2 arg  that is current state and action, this action is argument passed to dispatch call.
-					- The action can be any string, number, or any data type but most commonly it will be obj which can have type and value prop.
-					- In your reducer function usually we write switch case  and in that switch case will be action.type. and based on that case(action.type)we can return updated state.
-			initialState=> State that is assigned at first
 
-ex.=> <button onClick=(()=>{dispatch({type:"add",val:"10"})})>   reducer=(state,action)=>{switch "action" case "action.type" }
-
+//UUId creation 
 
 #UseMemo=> 
 - Used to achieve performance optimization in react application 
@@ -381,6 +432,13 @@ ex.=> <button onClick=(()=>{dispatch({type:"add",val:"10"})})>   reducer=(state,
 - Syntax=> const memoizedVal=useMmo(callbackFunction,dependency array[])
 - Your callback funct passed to useMemo hook if has any expensive/heavy computation. so it could affect entire application performance but as it is passed as use with UseMemoHook it wont get called on each component rerender.
   It will get called only when there are some changes in dependencies and it will return memoized value. 
+
+
+#HigherOrderComponents => - Component that takes another comps an argument. example React.memo
+						 - We can create our own HOC.Ex Loader
+
+
+#Routers
 
 JavaScript + React Important Questions
 - let vsr const difference
@@ -396,9 +454,17 @@ JavaScript + React Important Questions
 - Hoisting
 - 
 
+//task=> form 
 
 
-
+#Redux=> Steps
+1. create slice obj first and store inside some keys 
+	- name: name of slice,initialState:{},reducers:{functions}(reducer functions define)
+	- For accessing key from slice export like this slice.action
+2. Create store=> Configure store => configure what all functions needs to access 
+3. Wrap app inside <provider> which has 1 arg store to attach store 
+4. i.	To access states from redux use one hook useSelector which accepts callback function.
+   ii.  To update inside states inside redux need to access reducer function from redux so we use useDispatch hook 
 
 
 - React and features,advantages,disadvantages of react =>(Single page application and Declarative expected most)
@@ -415,3 +481,4 @@ JavaScript + React Important Questions
 - Props 
 - Main.jsx internals =. React dom, CreateRoot, render method
 - Use of cdn links
+

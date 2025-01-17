@@ -7,30 +7,29 @@ const UseReducerIntro = () => {
     switch (action) {
       case "add":
         return state + 1; //must return to update state value
-        break;
 
       case "sub":
         if (state == 0) {
           return state;
         }
         return state - 1;
-        break;
 
       case "mul":
         return state * 2;
-        break;
 
       default:
         return state;
-        break;
     }
   };
+
+  //  let [state,setState]=useState({/*internally func declared,*/} initialState )
   let [state, dispatch] = useReducer(reducer, initialState); //Similar to useState.Here you can write custom logic for reduce function
   return (
     <div>
       <button
         className="bg-purple-500 text-white rounded-md text-xl p-2 m-2"
         onClick={() => {
+          //setState()
           dispatch("add"); //this is passed to dispatch funct in 2nd parameter as 1st parameter react passes by default state
         }}
       >
@@ -41,7 +40,6 @@ const UseReducerIntro = () => {
         onClick={() => {
           dispatch("sub");
         }}
-        disable={state == 0}
       >
         Sub:{state}
       </button>

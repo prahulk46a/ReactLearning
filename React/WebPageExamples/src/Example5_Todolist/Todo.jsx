@@ -20,7 +20,8 @@ const Todo = () => {
   };
 
   const deleteTodo = (index) => {
-    const updatedTodos = todos.filter((_, idx) => idx !== index);
+    console.log(index);
+    const updatedTodos = todos.filter((todos, idx) => idx !== index);
     setTodos(updatedTodos);
   };
 
@@ -63,7 +64,7 @@ const Todo = () => {
                 e.stopPropagation();
                 deleteTodo(index);
               }}
-              className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600"
+              className="bg-red-500 text-black px-3 py-1 rounded-md hover:bg-red-600"
             >
               Delete
             </button>

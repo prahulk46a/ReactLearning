@@ -18,6 +18,9 @@ import TaskIntro from "./componets/hooks/tasks/TaskIntro";
 import UseReducerIntro from "./componets/hooks/useReducer/UseReducerIntro";
 import UseMemoIntro from "./componets/hooks/useMemo/UseMemoIntro";
 import HocIntro from "./componets/hoc/HocIntro";
+import UseCallbackIntro from "./componets/hooks/useCallback/UseCallbackIntro";
+import App from "./App";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // import JsxRules from './componets/jsx_intro/jsx_rules/JsxRules.jsx'
 
@@ -40,6 +43,7 @@ createRoot(document.getElementById("root")).render(
     {/* <TaskIntro /> */}
     {/* <UseReducerIntro /> */}
     {/* <UseMemoIntro /> */}
-    <HocIntro />
+    {/* <HocIntro /> */}
+    <App />
   </div>
 );

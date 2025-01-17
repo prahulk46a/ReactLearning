@@ -36,10 +36,10 @@ const TaskIntro = () => {
       {/* <UseEffect_Task4 /> */}
       {/* <UseEffect_Task5 /> */}
       {/* <UseEffectTask6 /> */}
-      {/* <UseEffect_Task7 /> */}
+      <UseEffect_Task7 />
       {/* <UseEffect_Task8 /> */}
       {/* <UseEffect_Task9 /> */}
-      <UseEffect_Task10 />
+      {/* <UseEffect_Task10 /> */}
     </div>
   );
 };
